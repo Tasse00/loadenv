@@ -3,7 +3,7 @@ use proc_macro::TokenStream;
 use quote::quote;
 use syn::{DeriveInput, NestedMeta, parse_macro_input};
 
-#[proc_macro_derive(EnvLoad, attributes(env))]
+#[proc_macro_derive(LoadEnv, attributes(env))]
 pub fn build_derive(ts: TokenStream) -> TokenStream {
     let out = parse_macro_input!(ts as DeriveInput);
 

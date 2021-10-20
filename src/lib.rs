@@ -1,5 +1,5 @@
 
-pub use loadenv_derive::EnvLoad;
+pub use loadenv_derive::LoadEnv;
 
 
 pub struct EnvValue {
@@ -31,7 +31,7 @@ mod tests {
     
     #[test]
     fn it_works() {
-        #[derive(loadenv::EnvLoad)]
+        #[derive(loadenv::LoadEnv)]
         struct Conf {
             #[env("VAR_STR", "XXXX")] 
             pub varstr: String,
